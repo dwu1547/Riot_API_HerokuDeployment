@@ -1,0 +1,1 @@
+document.getElementById("temp_region").innerHTML ="This will be the summoner stats page" //document.getElementById("region").innerHTML
