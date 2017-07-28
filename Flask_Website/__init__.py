@@ -4,7 +4,7 @@ import requests
 import json
 
 
-api_key="RGAPI-dc853454-849f-4bff-9305-6f8caf48a489"
+api_key="RGAPI-018f2f95-8f02-4e37-bff5-cc9936f8fa9e"
 
 
 app = Flask(__name__)
@@ -37,13 +37,20 @@ def my_form_get():
             temp_sd="No Rank In This Queue Yet"
             temp_fl="No Rank In This Queue Yet"
             temp_tt="No Rank In This Queue Yet"
+
+            sd_check=False
+            fl_check=False
+            tt_check=False
             for i in currSumm.getRank():
                 if("_SOLO_" in i):
                     temp_sd=i.replace("RANKED_SOLO_5x5","")
+                    sd_check=True
                 if("_FLEX_" in i and "_FLEX_TT" not in i):
                     temp_fl=i.replace("RANKED_FLEX_SR","")
+                    fl_check=True
                 if("FLEX_TT" in i):
                     temp_tt=i.replace("RANKED_FLEX_TT","")
+                    tt_check=True
                     
             
            

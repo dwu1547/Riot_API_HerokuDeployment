@@ -1,18 +1,16 @@
 <!DOCTYPE>
 <html>
 <head>
+<style>
+#searcher {
+  position: fixed; /* or absolute */
+  top: 40%;
+  left: 30%;
 
- <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   
-   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+}
+</style>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
 
 
 
@@ -26,9 +24,20 @@
 }
    </script>
 </head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
 <body>
 <h1>This Is the Summoner Search Page</h1>
-<div class="container">
+<div class="container" id="searcher">
 	<form action="/returnSummoner" method="POST">
 		 
 		
@@ -38,7 +47,7 @@
 			    <input type="text" class="form-control" id="ign" name="sname"  placeholder="Enter Summoner Name..." autocomplete=off>
 			    </div>
 
-				<div class ="col-sm-3">
+				<div class ="col-sm-1">
 					  <!--<div class="dropdown">
 				<button class="btn btn-pr imary dropdown-toggle" name="rname" value="NULL" type="button" data-toggle="dropdown" id="regionid">Region
 				<span class="caret"></span></button>
@@ -59,13 +68,14 @@
 			  </div>
 			  
 			  
-			  <div class ="col-sm-3">
+			  <div class ="col-sm-1">
 			  <input type="submit" class="btn btn-info" value="Search"> 
 			  </div>
 		 </div>	  
 	</form>
 </div>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="http://code.angularjs.org/1.5.3/angular-route.min.js"></script>
 </body>
 </html>
