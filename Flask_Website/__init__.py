@@ -4,7 +4,7 @@ import requests
 import json
 
 
-api_key="RGAPI-018f2f95-8f02-4e37-bff5-cc9936f8fa9e"
+api_key="RGAPI-cb62897a-0d6b-4061-ab21-5103e7d6cd08"
 
 
 app = Flask(__name__)
@@ -34,9 +34,9 @@ def my_form_get():
         currAPI = riot_api_class.Riot_API(api_key,input_region)
         currSumm = currAPI.get_summoner(ign)#returns a Summoner Object
         if(currSumm != None):
-            temp_sd="No Rank In This Queue Yet"
-            temp_fl="No Rank In This Queue Yet"
-            temp_tt="No Rank In This Queue Yet"
+            temp_sd="Unranked"
+            temp_fl="Unranked"
+            temp_tt="Unranked"
 
             sd_check=False
             fl_check=False

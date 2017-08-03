@@ -23,7 +23,7 @@ class Summoner(object):
                 
                 for j in i['entries']:
                     if(j['playerOrTeamName'] == self.ign): ###comparision oeprator is case sensitve otherwise rank won't show
-                        rank.append(str(i['queue'] + i['tier'] + " "+ j['rank']))
+                        rank.append(str(i['queue'] + i['tier'] + "_"+ j['rank']))
         return rank
             
 
