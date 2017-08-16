@@ -3,7 +3,7 @@
 document.getElementById("temp_region").innerHTML ="This will be the summoner stats page"; //document.getElementById("region").innerHTML
 
 //transfer ranks to card (Solo/Duo)
-var ranksolo = document.getElementById("solorank").innerHTML;
+var ranksolo = document.getElementById("solorank").textContent;
 if(String(ranksolo).includes("Unranked") == false) {
 var getsolo = ranksolo.split("_");
 document.getElementById("cardsolotier").innerHTML = getsolo[0];
