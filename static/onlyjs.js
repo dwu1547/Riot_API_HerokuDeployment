@@ -8,7 +8,7 @@ if(String(ranksolo).includes("Unranked") == false) {
 var getsolo = ranksolo.split("_");
 document.getElementById("cardsolotier").innerHTML = getsolo[0];
 document.getElementById("cardsolorank").innerHTML = getsolo[1];
-document.getElementById("soloimg").src = String("static/badges/" + getsolo[0] + "_" + getsolo[1] +"_badge.png")
+document.getElementById("soloimg").src = ("static/badges/" + String(getsolo[0]) + "_" + String(getsolo[1]) +"_badge.png");
 
 }else{
 document.getElementById("cardsolotier").innerHTML = "Unranked";
@@ -22,7 +22,7 @@ if(String(rankflex).includes("Unranked") == false) {
 var getflex = rankflex.split("_");
 document.getElementById("cardflextier").innerHTML = getflex[0];
 document.getElementById("cardflexrank").innerHTML = getflex[1];
-document.getElementById("fleximg").src = String("static/badges/" + getflex[0] + "_" + getflex[1] +"_badge.png")
+document.getElementById("fleximg").src = ("static/badges/" + String(getflex[0]) + "_" + String(getflex[1]) +"_badge.png");
 
 }else{
 document.getElementById("cardflextier").innerHTML = "Unranked";
@@ -36,7 +36,7 @@ if(String(ranktt).includes("Unranked") == false) {
 var gettt = ranktt.split("_");
 document.getElementById("cardtttier").innerHTML = gettt[0];
 document.getElementById("cardttrank").innerHTML = gettt[1];
-document.getElementById("ttimg").src = String("static/badges/" + gettt[0] + "_" + gettt[1] +"_badge.png")
+document.getElementById("ttimg").src = ("static/badges/" + String(gettt[0]) + "_" + String(gettt[1]) +"_badge.png");
 
 }else{
 document.getElementById("cardtttier").innerHTML = "Unranked";
