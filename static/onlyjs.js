@@ -8,8 +8,8 @@ if(String(ranksolo).includes("Unranked") == false) {
 var getsolo = ranksolo.split("_");
 document.getElementById("cardsolotier").innerHTML = getsolo[0];
 document.getElementById("cardsolorank").innerHTML = getsolo[1];
-document.getElementById("soloimg").src = "static/badges/" + String(getsolo[0]) + "_" + String(getsolo[1]) +"_badge.png";
-
+document.getElementById("soloimg").src = "static/badges/silver_II_badge.png";
+//"static/badges/" + String(getsolo[0]) + "_" + String(getsolo[1]) +"_badge.png";
 }else{
 document.getElementById("cardsolotier").innerHTML = "Unranked";
 document.getElementById("cardsolorank").innerHTML = "NaN";
