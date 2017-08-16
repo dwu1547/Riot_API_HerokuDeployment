@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+<head>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<h1>This Is the Summoner Search Page</h1>
+<div class="container">
+<form action="/returnSummoner" method="POST">
+	 <div class="col-sm-2">
+		<label for="ign">Summoner Name:</label>
+	  </div>
+	
+	  <div class = "row">
+	  
+		  <div class ="col-sm-3">
+		  <input type="text" class="form-control" id="ign" name="sname" placeholder="Enter Summoner Name...">
+		  </div>
+
+		  <div class ="col-sm-3">
+		  
+	
+		  <div class ="col-sm-3">
+		  <input type="submit" class="btn btn-info" value="Search"> 
+		  </div>
+		  
+	 </div>
+  
+</form>
+</div>
+
+</body>
+</html>
