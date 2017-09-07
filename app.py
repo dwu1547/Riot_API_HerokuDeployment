@@ -4,7 +4,7 @@ import requests
 import json
 
 
-api_key="RGAPI-1cd716b4-ce2b-4ed7-9fef-e669580be1bf"
+api_key="RGAPI-0cef5b76-5ca6-4661-9a8d-ef3c550b3d5c"
 
 
 app = Flask(__name__)
@@ -42,15 +42,28 @@ def my_form_get():
             fl_check=False
             tt_check=False
             for i in currSumm.getRank():
-                if("_SOLO_" in i):
+                if("RANKED_SOLO_5x5" in i):
                     temp_sd=i.replace("RANKED_SOLO_5x5","")
                     sd_check=True
-                if("_FLEX_" in i and "_FLEX_TT" not in i):
+                if("RANKED_FLEX_SR" in i):
                     temp_fl=i.replace("RANKED_FLEX_SR","")
                     fl_check=True
-                if("FLEX_TT" in i):
+                if("RANKED_FLEX_TT" in i):
                     temp_tt=i.replace("RANKED_FLEX_TT","")
                     tt_check=True
+
+            temp_count_sd="NaN"
+            temp_count_fl="NaN"
+            temp_count_tt="NaN"
+            for i in currSumm.getCounts():
+                if("RANKED_SOLO_5x5" in i):
+                    temp_count_sd=i.replace("RANKED_SOLO_5x5","")
+                if("RANKED_FLEX_SR" in i):
+                    temp_count_fl=i.replace("RANKED_FLEX_SR","")
+                if("RANKED_FLEX_TT" in i):
+                    temp_count_tt=i.replace("RANKED_FLEX_TT","")
+                
+                
                     
             
            
@@ -60,7 +73,10 @@ def my_form_get():
                                    region_name=region,
                                    div_rank1=temp_sd,
                                    div_rank2=temp_fl,
-                                   div_rank3=temp_tt)
+                                   div_rank3=temp_tt,
+                                   count_solo=temp_count_sd,
+                                   count_fl=temp_count_fl,
+                                   count_tt=temp_count_tt)
         else:
             return render_template("Summoner_Profile.html")
     

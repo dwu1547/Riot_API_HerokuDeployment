@@ -24,9 +24,20 @@ class Summoner(object):
                 for j in i['entries']:
                     if(j['playerOrTeamName'] == self.ign): ###comparision oeprator is case sensitve otherwise rank won't show
                         rank.append(str(i['queue'] + i['tier'] + "_"+ j['rank']))
-        return rank
-            
+        return rank #need to return outside the loop to get all the modes
 
+    def getCounts(self):
+        counts_url = "https://" + self.region + ".api.riotgames.com/lol/league/v3/leagues/by-summoner/" + str(self.id) + "?api_key=" + self.api_key
+        response = requests.get(counts_url)
+        if(bool(response.json())== False):
+            return "No Rank Available"
+        else:
+            counts=[]
+            for i in response.json():
+                for j in i['entries']:
+                    counts.append(str(i['queue'])+"_"+str(j['wins'])+"_"+str(j['losses'])+"_"+str(j['leaguePoints']))
+        return counts
+    
 class Riot_API(object):
 
     def __init__(self,api_key,region):
