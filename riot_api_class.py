@@ -35,7 +35,8 @@ class Summoner(object):
             counts=[]
             for i in response.json():
                 for j in i['entries']:
-                    counts.append(str(i['queue'])+"_"+str(j['wins'])+"_"+str(j['losses'])+"_"+str(j['leaguePoints']))
+                    if(j['playerOrTeamName'] == self.ign):
+                        counts.append(str(i['queue'])+"_"+str(j['wins'])+"_"+str(j['losses'])+"_"+str(j['leaguePoints']))
         return counts
     
 class Riot_API(object):
