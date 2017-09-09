@@ -89,10 +89,10 @@ def my_form_get():
                                    count_solo_percent=round((int(splitS[0])/(int(splitS[0])+int(splitS[1])))*100),
                                    count_solo_win=splitS[0],
                                    count_solo_loss=splitS[1],
-                                   count_fl_percent=temp_count_fl,
+                                   count_fl_percent=round((int(splitF[0])/(int(splitF[0])+int(splitF[1])))*100),
                                    count_fl_win=splitF[0],
                                    count_fl_loss=splitF[1],
-                                   count_tt_percent=temp_count_tt,
+                                   count_tt_percent=round((int(splitT[0])/(int(splitT[0])+int(splitT[1])))*100),
                                    count_tt_win=splitT[0],
                                    count_tt_loss=splitT[1])
         else:
