@@ -86,7 +86,7 @@ def my_form_get():
                                    div_rank1=temp_sd,
                                    div_rank2=temp_fl,
                                    div_rank3=temp_tt,
-                                   count_solo_percent=temp_count_sd,
+                                   count_solo_percent=(splitS[0]/splitS[1])*100,
                                    count_solo_win=splitS[0],
                                    count_solo_loss=splitS[1],
                                    count_fl_percent=temp_count_fl,
