@@ -58,16 +58,20 @@ def my_form_get():
             for i in currSumm.getCounts():
                 if("RANKED_SOLO_5x5_" in i):
                     temp_count_sd=i.replace("RANKED_SOLO_5x5_","")
+                    splitS = temp_count_sd.split("_")
                 if("RANKED_FLEX_SR_" in i):
                     temp_count_fl=i.replace("RANKED_FLEX_SR_","")
+                    splitF = temp_count_fl.split("_")
                 if("RANKED_FLEX_TT_" in i):
                     temp_count_tt=i.replace("RANKED_FLEX_TT_","")
-                
-            splitS = temp_count_sd.split("_")
-            splitF = temp_count_fl.split("_")
-            splitT = temp_count_tt.split("_")
+                    splitT = temp_count_tt.split("_")
 
             
+            
+            
+            
+            
+
                     
             
            
