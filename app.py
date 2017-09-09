@@ -59,18 +59,26 @@ def my_form_get():
             splitS = ["0","0","0"]
             splitF = ["0","0","0"]
             splitT = ["0","0","0"]
+
+            spercent = 0
+            fpercent = 0
+            tpercent = 0
             for i in currSumm.getCounts():
                 if("RANKED_SOLO_5x5_" in i):
                     temp_count_sd=i.replace("RANKED_SOLO_5x5_","")
                     splitS = temp_count_sd.split("_")
+                    spercent = round((int(splitS[0])/(int(splitS[0])+int(splitS[1])))*100)
+                
                 if("RANKED_FLEX_SR_" in i):
                     temp_count_fl=i.replace("RANKED_FLEX_SR_","")
                     splitF = temp_count_fl.split("_")
+                    fpercent = round((int(splitF[0])/(int(splitF[0])+int(splitF[1])))*100)
+                
                 if("RANKED_FLEX_TT_" in i):
                     temp_count_tt=i.replace("RANKED_FLEX_TT_","")
                     splitT = temp_count_tt.split("_")
-
-            
+                    tpercent = round((int(splitT[0])/(int(splitT[0])+int(splitT[1])))*100)
+                
             
             
             
@@ -86,13 +94,13 @@ def my_form_get():
                                    div_rank1=temp_sd,
                                    div_rank2=temp_fl,
                                    div_rank3=temp_tt,
-                                   count_solo_percent=round((int(splitS[0])/(int(splitS[0])+int(splitS[1])))*100),
+                                   count_solo_percent=spercent,
                                    count_solo_win=splitS[0],
                                    count_solo_loss=splitS[1],
-                                   count_fl_percent=round((int(splitF[0])/(int(splitF[0])+int(splitF[1])))*100),
+                                   count_fl_percent=fpercent,
                                    count_fl_win=splitF[0],
                                    count_fl_loss=splitF[1],
-                                   count_tt_percent=round((int(splitT[0])/(int(splitT[0])+int(splitT[1])))*100),
+                                   count_tt_percent=tpercent,
                                    count_tt_win=splitT[0],
                                    count_tt_loss=splitT[1])
         else:
