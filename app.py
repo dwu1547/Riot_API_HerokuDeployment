@@ -63,7 +63,11 @@ def my_form_get():
                 if("RANKED_FLEX_TT_" in i):
                     temp_count_tt=i.replace("RANKED_FLEX_TT_","")
                 
-                
+            splitS = temp_count_sd.split("_")
+            splitF = temp_count_fl.split("_")
+            splitT = temp_count_tt.split("_")
+
+            
                     
             
            
@@ -74,9 +78,11 @@ def my_form_get():
                                    div_rank1=temp_sd,
                                    div_rank2=temp_fl,
                                    div_rank3=temp_tt,
-                                   count_solo=temp_count_sd,
-                                   count_fl=temp_count_fl,
-                                   count_tt=temp_count_tt)
+                                   count_solo_percent=temp_count_sd,
+                                   count_solo_win=splitS[0],
+                                   count_solo_loss=splitS[1],
+                                   count_fl_percent=temp_count_fl,
+                                   count_tt_percent=temp_count_tt)
         else:
             return render_template("Summoner_Profile.html")
     
