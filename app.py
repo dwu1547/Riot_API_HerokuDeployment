@@ -55,22 +55,20 @@ def my_form_get():
             temp_count_sd="NaN"
             temp_count_fl="NaN"
             temp_count_tt="NaN"
+
+            splitS = ["NaN","NaN","NaN"]
+            splitF = ["NaN","NaN","NaN"]
+            splitT = ["NaN","NaN","NaN"]
             for i in currSumm.getCounts():
                 if("RANKED_SOLO_5x5_" in i):
                     temp_count_sd=i.replace("RANKED_SOLO_5x5_","")
                     splitS = temp_count_sd.split("_")
-                else:
-                    splitS = ["NaN","NaN","NaN"]
                 if("RANKED_FLEX_SR_" in i):
                     temp_count_fl=i.replace("RANKED_FLEX_SR_","")
                     splitF = temp_count_fl.split("_")
-                else:
-                    splitF = ["NaN","NaN","NaN"]
                 if("RANKED_FLEX_TT_" in i):
                     temp_count_tt=i.replace("RANKED_FLEX_TT_","")
                     splitT = temp_count_tt.split("_")
-                else:
-                    splitT = ["NaN","NaN","NaN"]
 
             
             
