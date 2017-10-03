@@ -4,7 +4,7 @@ import requests
 import json
 
 
-api_key="RGAPI-632030cf-3e50-4ea8-83a1-51026a2b3712"
+api_key="RGAPI-e057b103-1f67-423e-9928-fb517970f613"
 
 
 app = Flask(__name__)
